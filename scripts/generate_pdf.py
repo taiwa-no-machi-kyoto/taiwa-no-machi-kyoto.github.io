@@ -8,6 +8,8 @@ from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 from xml.sax.saxutils import escape
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 
 industry = os.environ["INDUSTRY"]
 role = os.environ["ROLE"]
@@ -217,9 +219,17 @@ try:
     )
 
     text = response.text or "生成結果が空でした。"
+    
+    pdfmetrics.registerFont(UnicodeCIDFont("HeiseiKakuGo-W5"))
+    pdfmetrics.registerFont(UnicodeCIDFont("HeiseiMin-W3"))
 
     doc = SimpleDocTemplate(str(pdf_path), pagesize=A4)
     styles = getSampleStyleSheet()
+
+    styles["Title"].fontName = "HeiseiKakuGo-W5"
+    styles["BodyText"].fontName = "HeiseiMin-W3"
+    styles["BodyText"].fontSize = 10
+    styles["BodyText"].leading = 16
     story = []
 
     story.append(Paragraph("置きベン活動 企画書", styles["Title"]))
