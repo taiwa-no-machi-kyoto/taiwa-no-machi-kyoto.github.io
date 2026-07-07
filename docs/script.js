@@ -69,9 +69,7 @@ btn.addEventListener("click", async () => {
   const jobId = crypto.randomUUID();
 
   message.textContent = "PDFを生成しています。少し待ってから自動確認します。";
-  downloadLink.style.display = "none";
-  downloadLink.removeAttribute("href");
-  downloadLink.hidden = true;
+  hideDownloadButton();
 
   await fetch(WORKER_URL, {
     method: "POST",
@@ -100,9 +98,7 @@ async function pollResult(jobId) {
 
         if (data.status === "success") {
           message.textContent = "PDFが完成しました。";
-          downloadLink.style.display = "inline-block";
-          downloadLink.href = data.pdf_url;
-          downloadLink.hidden = false;
+          showDownloadButton(data.pdf_url);
           return;
         }
 
@@ -120,4 +116,14 @@ async function pollResult(jobId) {
   }
 
   message.textContent = "生成に時間がかかっています。しばらくしてから再度確認してください。";
+}
+
+function showDownloadButton(url) {
+  downloadLink.href = url;
+  downloadLink.style.display = "inline-block";
+}
+
+function hideDownloadButton() {
+  downloadLink.style.display = "none";
+  downloadLink.removeAttribute("href");
 }
