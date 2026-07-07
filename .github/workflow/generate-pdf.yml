@@ -1,0 +1,49 @@
+name: Generate Bench Proposal PDF
+
+on:
+  workflow_dispatch:
+    inputs:
+      industry:
+        description: "業種"
+        required: true
+        type: string
+      role:
+        description: "役職"
+        required: true
+        type: string
+      job_id:
+        description: "Job ID"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Generate PDF
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          INDUSTRY: ${{ inputs.industry }}
+          ROLE: ${{ inputs.role }}
+          JOB_ID: ${{ inputs.job_id }}
+        run: python scripts/generate_pdf.py
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/results/
+          git commit -m "Add generated proposal result" || echo "No changes"
+          git push
