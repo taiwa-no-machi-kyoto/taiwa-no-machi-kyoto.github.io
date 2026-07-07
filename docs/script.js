@@ -87,7 +87,7 @@ btn.addEventListener("click", async () => {
 async function pollResult(jobId) {
   const statusUrl = `./results/${jobId}/status.json`;
 
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 60; i++) {
     try {
       const res = await fetch(statusUrl, { cache: "no-store" });
 
@@ -111,7 +111,7 @@ async function pollResult(jobId) {
       }
     } catch (e) {}
 
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise(resolve => setTimeout(resolve, 10000));
   }
 
   message.textContent = "生成に時間がかかっています。しばらくしてから再度確認してください。";
