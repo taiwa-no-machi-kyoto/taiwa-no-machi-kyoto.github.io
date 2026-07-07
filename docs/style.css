@@ -652,3 +652,12 @@ button {
   text-decoration: none;
   border-radius: 8px;
 }
+
+.download-button {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}

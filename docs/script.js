@@ -54,6 +54,8 @@ const WORKER_URL = "https://okibench-proposal-trigger.0105931rikei.workers.dev";
 const btn = document.getElementById("generateBtn");
 const message = document.getElementById("message");
 const downloadLink = document.getElementById("downloadLink");
+downloadLink.style.display = "none";
+downloadLink.removeAttribute("href");
 
 btn.addEventListener("click", async () => {
   const industry = document.getElementById("industry").value.trim();
@@ -67,6 +69,8 @@ btn.addEventListener("click", async () => {
   const jobId = crypto.randomUUID();
 
   message.textContent = "PDFを生成しています。少し待ってから自動確認します。";
+  downloadLink.style.display = "none";
+  downloadLink.removeAttribute("href");
   downloadLink.hidden = true;
 
   await fetch(WORKER_URL, {
@@ -96,6 +100,7 @@ async function pollResult(jobId) {
 
         if (data.status === "success") {
           message.textContent = "PDFが完成しました。";
+          downloadLink.style.display = "inline-block";
           downloadLink.href = data.pdf_url;
           downloadLink.hidden = false;
           return;
