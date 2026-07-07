@@ -7,6 +7,7 @@ from google.genai.errors import ClientError
 from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
+from xml.sax.saxutils import escape
 
 industry = os.environ["INDUSTRY"]
 role = os.environ["ROLE"]
@@ -202,6 +203,9 @@ prompt = f"""
 
 単なるベンチ設置ではなく、「人と人との関係を育てるインフラ」として設計してください。
 
+出力はMarkdown表を使わず、見出しと箇条書き中心で作成してください。
+HTMLタグは使わないでください。
+
 """
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
@@ -220,10 +224,13 @@ try:
 
     story.append(Paragraph("置きベン活動 企画書", styles["Title"]))
     story.append(Spacer(1, 16))
+    
+    
+    safe_text = text.replace("<br>", "\n").replace("<br/>", "\n")
 
-    for line in text.split("\n"):
+    for line in safe_text.split("\n"):
         if line.strip():
-            story.append(Paragraph(line, styles["BodyText"]))
+            story.append(Paragraph(escape(line), styles["BodyText"]))
             story.append(Spacer(1, 8))
 
     doc.build(story)
