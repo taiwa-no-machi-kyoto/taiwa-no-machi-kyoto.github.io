@@ -661,3 +661,62 @@ button {
   text-decoration: none;
   border-radius: 8px;
 }
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 24px;
+  background: #fffaf2;
+  border-bottom: 1px solid #ddd0bd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.toolbar label {
+  font-weight: 700;
+}
+
+input[type="range"] {
+  width: min(520px, 70vw);
+}
+
+input[type="number"] {
+  width: 110px;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+
+.hint {
+  font-size: 14px;
+  color: #66584a;
+}
+
+.svg-shell {
+  padding: 24px;
+  overflow: auto;
+}
+
+#svgContainer {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #d6c8b8;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+#svgContainer svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.error {
+  padding: 24px;
+  color: #9b1c1c;
+  background: #fff0f0;
+  border: 1px solid #e4b3b3;
+}

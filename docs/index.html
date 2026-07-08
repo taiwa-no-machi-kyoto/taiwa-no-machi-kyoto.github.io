@@ -211,7 +211,22 @@
       <a id="downloadLink" class="download-button" href="#" download style="display: none;">PDFをダウンロード</a>
       
     </section>
-    
+    <section>
+      <h2>置きベン設計図ジェネレーター</h2>
+      <p>ベンチ幅を1000mm〜2500mmの範囲で変更できます。</p>
+
+      <div class="toolbar">
+        <label for="benchWidthRange">ベンチ幅</label>
+        <input id="benchWidthRange" type="range" min="1000" max="2500" step="50" value="1200" />
+        <input id="benchWidthNumber" type="number" min="1000" max="2500" step="50" value="1200" />
+        <strong>mm</strong>
+        <span class="hint">※ SVGを外部読み込みするため、ローカルサーバーで開くのがおすすめです。</span>
+      </div>
+
+      <main class="svg-shell">
+        <div id="svgContainer">SVGを読み込み中...</div>
+      </main>
+    </section>
     <section id="contact" class="section contact">
       <div class="contact__box fade-in">
         <p class="eyebrow">Contact</p>

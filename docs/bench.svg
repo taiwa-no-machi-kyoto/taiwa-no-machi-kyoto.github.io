@@ -1,0 +1,292 @@
+<svg id="bench_blueprint_svg" xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200">
+  <defs id="svg_defs">
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+      <path id="arrow_path" d="M0,0 L10,5 L0,10 Z" fill="#333"/>
+    </marker>
+
+    <pattern id="woodgrain" width="80" height="20" patternUnits="userSpaceOnUse">
+      <rect id="woodgrain_base" width="80" height="20" fill="#f3c27a"/>
+      <path id="woodgrain_line_1" d="M0 5 C20 0, 40 10, 80 4" stroke="#d49a55" stroke-width="1" fill="none" opacity="0.45"/>
+      <path id="woodgrain_line_2" d="M0 15 C25 8, 45 20, 80 13" stroke="#d49a55" stroke-width="1" fill="none" opacity="0.35"/>
+    </pattern>
+
+    <style id="svg_style">
+      .title{font-family:sans-serif;font-size:34px;font-weight:700;fill:#222}
+      .subtitle{font-family:sans-serif;font-size:24px;font-weight:700;fill:#222}
+      .label{font-family:sans-serif;font-size:18px;fill:#222}
+      .small{font-family:sans-serif;font-size:15px;fill:#222}
+      .note{font-family:sans-serif;font-size:16px;fill:#222}
+      .dim{font-family:sans-serif;font-size:17px;fill:#111;font-weight:700}
+      .line{stroke:#333;stroke-width:2;fill:none}
+      .thin{stroke:#555;stroke-width:1.5;fill:none}
+      .dash{stroke:#555;stroke-width:2;stroke-dasharray:8 6;fill:none}
+      .wood{fill:url(#woodgrain);stroke:#333;stroke-width:2}
+      .brace{fill:#c78a45;stroke:#333;stroke-width:2}
+      .leg{fill:#d8a15a;stroke:#333;stroke-width:2}
+      .screw{fill:#444;stroke:#111;stroke-width:1}
+      .panel{fill:#fffdf8;stroke:#ccc;stroke-width:2;rx:12}
+    </style>
+  </defs>
+
+  <rect id="background" x="0" y="0" width="1600" height="2200" fill="#fff"/>
+  <text id="main_title" x="800" y="55" text-anchor="middle" class="title">置きベン 詳細組み立て図｜2〜3人用・背もたれなしベンチ</text>
+  <text id="main_size_label" x="800" y="90" text-anchor="middle" class="label">完成寸法：幅1200mm × 奥行350mm × 高さ420mm ／ 主材料：2×4材</text>
+
+  <rect id="perspective_panel" x="40" y="120" width="720" height="520" class="panel"/>
+  <text id="perspective_title" x="70" y="160" class="subtitle">1. 完成斜視図</text>
+
+  <g id="perspective_view" transform="translate(120,210)">
+    <polygon id="perspective_seat_1" points="80,80 560,80 640,130 160,130" class="wood"/>
+    <polygon id="perspective_seat_2" points="80,125 560,125 640,175 160,175" class="wood"/>
+
+    <line id="perspective_seat_gap_line_1" x1="90" y1="124" x2="570" y2="124" class="thin"/>
+    <line id="perspective_seat_gap_line_2" x1="100" y1="169" x2="580" y2="169" class="thin"/>
+
+    <polygon id="perspective_brace_right_lower_depth" points="580,285 670,330 670,355 580,310" class="brace"/>
+    <polygon id="perspective_leg_front_right" points="620,225 650,242 650,390 620,373" class="leg"/>
+    <polygon id="perspective_leg_back_right" points="548,190 578,207 578,355 548,338" class="leg"/>
+
+    <polygon id="perspective_center_brace_front" points="130,265 625,265 625,290 130,290" class="brace"/>
+    <polygon id="perspective_center_brace_back" points="145,320 640,320 640,345 145,345" class="brace"/>
+    <polygon id="perspective_brace_left_depth" points="120,205 210,250 210,275 120,230" class="brace"/>
+    <polygon id="perspective_brace_right_depth" points="550,205 640,250 640,275 550,230" class="brace"/>
+
+    <polygon id="perspective_leg_front_left" points="160,225 190,242 190,390 160,373" class="leg"/>
+    <polygon id="perspective_leg_back_left" points="90,190 120,207 120,355 90,338" class="leg"/>
+
+    <polygon id="perspective_brace_left_lower_depth" points="100,285 190,330 190,355 100,310" class="brace"/>
+    <polygon id="perspective_seat_3" points="80,170 560,170 640,220 160,220" class="wood"/>
+
+    <circle id="perspective_screw_01" cx="160" cy="105" r="4" class="screw"/>
+    <circle id="perspective_screw_02" cx="220" cy="105" r="4" class="screw"/>
+    <circle id="perspective_screw_03" cx="500" cy="105" r="4" class="screw"/>
+    <circle id="perspective_screw_04" cx="560" cy="105" r="4" class="screw"/>
+    <circle id="perspective_screw_05" cx="165" cy="150" r="4" class="screw"/>
+    <circle id="perspective_screw_06" cx="225" cy="150" r="4" class="screw"/>
+    <circle id="perspective_screw_07" cx="505" cy="150" r="4" class="screw"/>
+    <circle id="perspective_screw_08" cx="565" cy="150" r="4" class="screw"/>
+    <circle id="perspective_screw_09" cx="170" cy="195" r="4" class="screw"/>
+    <circle id="perspective_screw_10" cx="230" cy="195" r="4" class="screw"/>
+    <circle id="perspective_screw_11" cx="510" cy="195" r="4" class="screw"/>
+    <circle id="perspective_screw_12" cx="570" cy="195" r="4" class="screw"/>
+
+    <text id="perspective_seat_label" x="250" y="60" class="label">座面材 1200mm × 3本</text>
+    <line id="perspective_seat_label_arrow" x1="335" y1="65" x2="360" y2="95" class="thin" marker-end="url(#arrow)"/>
+
+    <text id="perspective_leg_label" x="470" y="295" class="label">脚材 380mm × 4本</text>
+    <line id="perspective_leg_label_arrow" x1="545" y1="300" x2="565" y2="345" class="thin" marker-end="url(#arrow)"/>
+
+    <text id="perspective_center_brace_label" x="210" y="300" class="label">中央補強材 1000mm</text>
+    <line id="perspective_center_brace_label_arrow" x1="310" y1="305" x2="350" y2="333" class="thin" marker-end="url(#arrow)"/>
+
+    <text id="perspective_side_brace_label" x="20" y="265" class="label">横補強材 250mm</text>
+    <line id="perspective_side_brace_label_arrow" x1="140" y1="260" x2="170" y2="235" class="thin" marker-end="url(#arrow)"/>
+  </g>
+
+  <rect id="top_panel" x="800" y="120" width="760" height="520" class="panel"/>
+  <text id="top_title" x="830" y="160" class="subtitle">2. 上面図｜座面と裏側補強位置</text>
+
+  <g id="top_view" transform="translate(880,220)">
+    <rect id="top_seat_1" x="0" y="0" width="600" height="55" class="wood"/>
+    <rect id="top_seat_2" x="0" y="65" width="600" height="55" class="wood"/>
+    <rect id="top_seat_3" x="0" y="130" width="600" height="55" class="wood"/>
+
+    <rect id="top_brace_left" x="75" y="0" width="28" height="185" class="dash"/>
+    <rect id="top_brace_right" x="497" y="0" width="28" height="185" class="dash"/>
+
+    <circle id="top_screw_left_01" cx="82" cy="20" r="4" class="screw"/>
+    <circle id="top_screw_left_02" cx="96" cy="20" r="4" class="screw"/>
+    <circle id="top_screw_left_03" cx="82" cy="87" r="4" class="screw"/>
+    <circle id="top_screw_left_04" cx="96" cy="87" r="4" class="screw"/>
+    <circle id="top_screw_left_05" cx="82" cy="153" r="4" class="screw"/>
+    <circle id="top_screw_left_06" cx="96" cy="153" r="4" class="screw"/>
+
+    <circle id="top_screw_right_01" cx="504" cy="20" r="4" class="screw"/>
+    <circle id="top_screw_right_02" cx="518" cy="20" r="4" class="screw"/>
+    <circle id="top_screw_right_03" cx="504" cy="87" r="4" class="screw"/>
+    <circle id="top_screw_right_04" cx="518" cy="87" r="4" class="screw"/>
+    <circle id="top_screw_right_05" cx="504" cy="153" r="4" class="screw"/>
+    <circle id="top_screw_right_06" cx="518" cy="153" r="4" class="screw"/>
+
+    <line id="top_dim_width_line" x1="0" y1="-45" x2="600" y2="-45" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="top_dim_width_text" x="300" y="-28" text-anchor="middle" class="dim">1200mm</text>
+
+    <line id="top_dim_depth_line" x1="630" y1="0" x2="630" y2="185" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="top_dim_depth_text" x="650" y="97" class="dim">350mm</text>
+
+    <line id="top_dim_gap_line" x1="612" y1="55" x2="612" y2="65" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="top_dim_gap_text" x="625" y="65" class="small">隙間 5〜10mm</text>
+
+    <line id="top_dim_left_offset_line" x1="0" y1="225" x2="75" y2="225" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="top_dim_left_offset_text" x="38" y="250" text-anchor="middle" class="dim">150mm</text>
+
+    <line id="top_dim_right_offset_line" x1="525" y1="225" x2="600" y2="225" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="top_dim_right_offset_text" x="563" y="250" text-anchor="middle" class="dim">150mm</text>
+
+    <text id="top_brace_label" x="105" y="215" class="label">破線：座面裏の横補強材</text>
+    <text id="top_note_label" x="0" y="285" class="note">座面板3本は奥行方向に並べる。1200mm方向がベンチの横幅。</text>
+  </g>
+
+  <rect id="side_panel" x="800" y="680" width="760" height="430" class="panel"/>
+  <text id="side_title" x="830" y="720" class="subtitle">4. 側面図｜奥行・固定関係</text>
+
+  <g id="side_view" transform="translate(900,790)">
+    <rect id="side_seat_1" x="80" y="0" width="109" height="45" class="wood"/>
+    <rect id="side_seat_2" x="191" y="0" width="109" height="45" class="wood"/>
+    <rect id="side_seat_3" x="301" y="0" width="109" height="45" class="wood"/>
+    <rect id="side_leg_front" x="110" y="45" width="42" height="190" class="leg"/>
+    <rect id="side_leg_back" x="338" y="45" width="42" height="190" class="leg"/>
+    <rect id="side_brace_under_seat" x="95" y="45" width="300" height="28" class="brace"/>
+    <rect id="side_center_brace" x="120" y="145" width="245" height="24" class="brace"/>
+
+    <circle id="side_screw_01" cx="125" cy="58" r="4" class="screw"/>
+    <circle id="side_screw_02" cx="142" cy="58" r="4" class="screw"/>
+    <circle id="side_screw_03" cx="353" cy="58" r="4" class="screw"/>
+    <circle id="side_screw_04" cx="370" cy="58" r="4" class="screw"/>
+    <circle id="side_screw_05" cx="135" cy="155" r="4" class="screw"/>
+    <circle id="side_screw_06" cx="350" cy="155" r="4" class="screw"/>
+
+    <line id="side_dim_depth_line" x1="80" y1="-35" x2="410" y2="-35" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="side_dim_depth_text" x="245" y="-50" text-anchor="middle" class="dim">350mm</text>
+    <line id="side_dim_height_line" x1="450" y1="0" x2="450" y2="235" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="side_dim_height_text" x="470" y="122" class="dim">420mm</text>
+
+    <text id="side_brace_label" x="105" y="105" class="label">横補強材 250mm</text>
+    <line id="side_brace_label_arrow" x1="230" y1="103" x2="260" y2="75" class="thin" marker-end="url(#arrow)"/>
+    <text id="side_fix_label" x="130" y="205" class="label">脚を座面裏へネジ固定</text>
+    <text id="side_note_label" x="80" y="285" class="note">横補強材が座面3本を束ね、脚を受ける。脚は前後2本で荷重を支える。</text>
+  </g>
+
+  <rect id="front_panel" x="40" y="680" width="720" height="430" class="panel"/>
+  <text id="front_title" x="70" y="720" class="subtitle">3. 正面図｜高さ・脚・中央補強材</text>
+
+  <g id="front_view" transform="translate(100,780)">
+    <rect id="front_seat" x="40" y="0" width="600" height="45" class="wood"/>
+    <rect id="front_leg_left" x="95" y="45" width="38" height="190" class="leg"/>
+    <rect id="front_leg_right" x="547" y="45" width="38" height="190" class="leg"/>
+    <rect id="front_center_brace" x="120" y="145" width="440" height="28" class="brace"/>
+
+    <circle id="front_screw_01" cx="108" cy="68" r="4" class="screw"/>
+    <circle id="front_screw_02" cx="122" cy="68" r="4" class="screw"/>
+    <circle id="front_screw_03" cx="560" cy="68" r="4" class="screw"/>
+    <circle id="front_screw_04" cx="574" cy="68" r="4" class="screw"/>
+    <circle id="front_screw_05" cx="145" cy="159" r="4" class="screw"/>
+    <circle id="front_screw_06" cx="535" cy="159" r="4" class="screw"/>
+
+    <line id="front_dim_width_line" x1="40" y1="-35" x2="640" y2="-35" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="front_dim_width_text" x="340" y="-50" text-anchor="middle" class="dim">1200mm</text>
+    <line id="front_dim_height_line" x1="680" y1="0" x2="680" y2="235" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="front_dim_height_text" x="700" y="122" class="dim">420mm</text>
+
+    <line id="front_dim_left_offset_line" x1="40" y1="270" x2="115" y2="270" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="front_dim_left_offset_text" x="78" y="295" text-anchor="middle" class="dim">150mm</text>
+    <line id="front_dim_right_offset_line" x1="565" y1="270" x2="640" y2="270" class="line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text id="front_dim_right_offset_text" x="603" y="295" text-anchor="middle" class="dim">150mm</text>
+
+    <line id="front_left_leg_guide_line" x1="115" y1="45" x2="115" y2="260" class="dash"/>
+    <line id="front_right_leg_guide_line" x1="565" y1="45" x2="565" y2="260" class="dash"/>
+
+    <text id="front_center_brace_label" x="245" y="135" class="label">中央補強材 1000mm</text>
+    <text id="front_leg_left_label" x="80" y="250" class="label">脚材</text>
+    <text id="front_leg_right_label" x="510" y="250" class="label">脚材</text>
+  </g>
+
+  <rect id="cut_panel" x="40" y="1150" width="720" height="520" class="panel"/>
+  <text id="cut_title" x="70" y="1190" class="subtitle">5. 部材カットリスト</text>
+
+  <g id="cut_view" transform="translate(90,1245)">
+    <rect id="cut_seat_1" x="0" y="0" width="600" height="34" class="wood"/>
+    <rect id="cut_seat_2" x="0" y="45" width="600" height="34" class="wood"/>
+    <rect id="cut_seat_3" x="0" y="90" width="600" height="34" class="wood"/>
+    <text id="cut_seat_label" x="0" y="-5" class="label">座面材 1200mm × 3本</text>
+
+    <rect id="cut_leg_1" x="0" y="160" width="190" height="34" class="leg"/>
+    <rect id="cut_leg_2" x="210" y="160" width="190" height="34" class="leg"/>
+    <rect id="cut_leg_3" x="0" y="205" width="190" height="34" class="leg"/>
+    <rect id="cut_leg_4" x="210" y="205" width="190" height="34" class="leg"/>
+    <text id="cut_leg_label" x="420" y="186" class="label">脚材 380mm × 4本</text>
+
+    <rect id="cut_brace_1" x="0" y="280" width="125" height="34" class="brace"/>
+    <rect id="cut_brace_2" x="145" y="280" width="125" height="34" class="brace"/>
+    <rect id="cut_brace_3" x="290" y="280" width="125" height="34" class="brace"/>
+    <rect id="cut_brace_4" x="435" y="280" width="125" height="34" class="brace"/>
+    <text id="cut_brace_label" x="0" y="270" class="label">横補強材 250mm × 4本</text>
+
+    <rect id="cut_center_brace_1" x="0" y="350" width="500" height="34" class="brace"/>
+    <rect id="cut_center_brace_2" x="0" y="390" width="500" height="34" class="brace"/>
+    <text id="cut_center_brace_label" x="520" y="394" class="label">中央補強材 1000mm × 2本</text>
+  </g>
+
+  <rect id="step_panel" x="800" y="1150" width="760" height="520" class="panel"/>
+  <text id="step_title" x="830" y="1190" class="subtitle">6. 組み立て工程図</text>
+
+  <g id="step_view" transform="translate(835,1235)">
+    <g id="step_1_group">
+      <text id="step_1_label" x="0" y="0" class="label">① 座面板3本を並べる</text>
+      <rect id="step_1_seat_1" x="0" y="20" width="180" height="20" class="wood"/>
+      <rect id="step_1_seat_2" x="0" y="48" width="180" height="20" class="wood"/>
+      <rect id="step_1_seat_3" x="0" y="76" width="180" height="20" class="wood"/>
+      <text id="step_1_note" x="0" y="120" class="small">隙間5〜10mmを確保</text>
+    </g>
+
+    <g id="step_2_group" transform="translate(250,0)">
+      <text id="step_2_label" x="0" y="0" class="label">② 裏側に横補強材</text>
+      <rect id="step_2_seat_1" x="0" y="20" width="180" height="20" class="wood"/>
+      <rect id="step_2_seat_2" x="0" y="48" width="180" height="20" class="wood"/>
+      <rect id="step_2_seat_3" x="0" y="76" width="180" height="20" class="wood"/>
+      <rect id="step_2_brace_left" x="25" y="20" width="18" height="76" class="brace"/>
+      <rect id="step_2_brace_right" x="137" y="20" width="18" height="76" class="brace"/>
+      <circle id="step_2_screw_01" cx="34" cy="30" r="3" class="screw"/>
+      <circle id="step_2_screw_02" cx="34" cy="58" r="3" class="screw"/>
+      <circle id="step_2_screw_03" cx="34" cy="86" r="3" class="screw"/>
+      <circle id="step_2_screw_04" cx="146" cy="30" r="3" class="screw"/>
+      <circle id="step_2_screw_05" cx="146" cy="58" r="3" class="screw"/>
+      <circle id="step_2_screw_06" cx="146" cy="86" r="3" class="screw"/>
+      <text id="step_2_note" x="0" y="120" class="small">左右端から150mm内側</text>
+    </g>
+
+    <g id="step_3_group" transform="translate(500,0)">
+      <text id="step_3_label" x="0" y="0" class="label">③ 脚4本を固定</text>
+      <rect id="step_3_seat_1" x="25" y="20" width="43" height="25" class="wood"/>
+      <rect id="step_3_seat_2" x="68" y="20" width="43" height="25" class="wood"/>
+      <rect id="step_3_seat_3" x="111" y="20" width="44" height="25" class="wood"/>
+      <rect id="step_3_leg_left" x="28" y="59" width="20" height="66" class="leg"/>
+      <rect id="step_3_leg_right" x="132" y="59" width="20" height="66" class="leg"/>
+      <rect id="step_3_brace_under_seat" x="25" y="45" width="130" height="14" class="brace"/>
+      <text id="step_3_note" x="0" y="150" class="small">前後左右に脚を配置</text>
+    </g>
+
+    <g id="step_4_group" transform="translate(0,220)">
+      <text id="step_4_label" x="0" y="0" class="label">④ 中央補強材を入れる</text>
+      <rect id="step_4_seat" x="0" y="25" width="210" height="25" class="wood"/>
+      <rect id="step_4_leg_left" x="30" y="50" width="22" height="90" class="leg"/>
+      <rect id="step_4_leg_right" x="158" y="50" width="22" height="90" class="leg"/>
+      <rect id="step_4_center_brace" x="45" y="95" width="125" height="16" class="brace"/>
+      <text id="step_4_note" x="0" y="165" class="small">長手方向に1000mm材を渡す</text>
+    </g>
+
+    <g id="step_5_group" transform="translate(300,220)">
+      <text id="step_5_label" x="0" y="0" class="label">⑤ 仕上げ・安全確認</text>
+      <rect id="step_5_finished_seat" x="0" y="30" width="230" height="36" class="wood" rx="8"/>
+      <text id="step_5_note_1" x="0" y="95" class="small">角を丸める／ネジ頭を沈める</text>
+      <text id="step_5_note_2" x="0" y="120" class="small">屋外用防腐・防水塗装を2回</text>
+      <text id="step_5_note_3" x="0" y="145" class="small">ぐらつき・ささくれを確認</text>
+    </g>
+  </g>
+
+  <rect id="notes_panel" x="40" y="1680" width="1520" height="470" class="panel"/>
+  <text id="notes_title" x="70" y="1720" class="subtitle">施工メモ・安全注意</text>
+
+  <g id="notes_view" transform="translate(80,1745)">
+    <text id="note_01" x="0" y="0" class="note">● 木材断面目安：2×4材 約38mm × 89mm。座面は3本並べると奥行約267mm＋隙間となるため、余裕を見て完成奥行350mm以内に収める。</text>
+    <text id="note_02" x="0" y="35" class="note">● 座面下の横補強材250mmは、座面3本を束ねる向きで取り付ける。左右端から150mm内側が基本位置。</text>
+    <text id="note_03" x="0" y="70" class="note">● 脚4本は左右2か所・前後2か所。横補強材と脚を確実にネジ固定し、荷重が逃げないようにする。</text>
+    <text id="note_04" x="0" y="105" class="note">● 中央補強材1000mmは長手方向に通し、左右の脚部をつないで横揺れを抑える。</text>
+    <text id="note_05" x="0" y="140" class="note">● ネジは65mm程度を目安。木割れ防止のため下穴を開ける。座面1本につき各補強材へ2本ずつが目安。</text>
+    <text id="note_06" x="0" y="175" class="note">● 角は必ず紙やすりで丸める。触って痛い箇所、衣服が引っかかる箇所を残さない。</text>
+    <text id="note_07" x="0" y="210" class="note">● ネジ頭は表面から飛び出さないように沈める。屋外設置では防腐・防水塗料を塗る。</text>
+    <text id="note_08" x="0" y="245" class="note">● 設置前に、大人2〜3人が座ってもぐらつかないこと、通行の妨げにならないことを確認する。</text>
+    <text id="tools_title" x="0" y="295" class="subtitle">必要道具</text>
+    <text id="tools_note" x="0" y="330" class="note">のこぎりまたは丸ノコ／電動ドライバー／下穴用ドリル／メジャー／さしがね／クランプ／紙やすり／刷毛</text>
+  </g>
+</svg>
