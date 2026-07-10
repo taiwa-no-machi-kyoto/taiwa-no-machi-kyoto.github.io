@@ -307,7 +307,7 @@ function updateTopView() {
 
 function updateFrontView() {
   const scale = viewScale(600);
-  const w = mmToPx(bench.width, scale);
+  const w = Math.min(mmToPx(bench.width, scale), mmToPx(1900, scale));
   const startX = 40;
   const endX = startX + w;
   const offset = mmToPx(bench.braceOffset, scale);
