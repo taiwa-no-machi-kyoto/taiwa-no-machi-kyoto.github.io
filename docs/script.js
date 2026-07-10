@@ -307,7 +307,7 @@ function updateTopView() {
 
 function updateFrontView() {
   const scale = viewScale(600);
-  const w = Math.min(mmToPx(bench.width, scale), mmToPx(1900, scale));
+  const w = mmToPx(bench.width, scale);
   const startX = 40;
   const endX = startX + w;
   const offset = mmToPx(bench.braceOffset, scale);
@@ -379,7 +379,7 @@ const originalPerspectivePoints = {
 
 function updatePerspectiveView() {
   const ratio = bench.width / bench.baseWidth;
-  const dx = (ratio - 1) * 180;
+  const dx = Math.min((ratio - 1) * 180, 105);
 
   setText("perspective_seat_label", `座面材 ${bench.width}mm × 3本`);
 
