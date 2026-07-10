@@ -36,51 +36,48 @@
   <text id="perspective_title" x="70" y="160" class="subtitle">1. 完成斜視図</text>
 
   <g id="perspective_view" transform="translate(120,210)">
-    <polygon id="perspective_seat_1" points="80,80 560,80 640,130 160,130" class="wood"/>
-    <polygon id="perspective_seat_2" points="80,125 560,125 640,175 160,175" class="wood"/>
+    <polygon id="perspective_seat_1" points="-20,80 460,80 540,130 60,130" class="wood"/>
+    <polygon id="perspective_seat_2" points="-20,125 460,125 540,175 60,175" class="wood"/>
 
-    <line id="perspective_seat_gap_line_1" x1="90" y1="124" x2="570" y2="124" class="thin"/>
-    <line id="perspective_seat_gap_line_2" x1="100" y1="169" x2="580" y2="169" class="thin"/>
+    <polygon id="perspective_brace_right_lower_depth" points="480,285 570,330 570,355 480,310" class="brace"/>
+    <polygon id="perspective_leg_front_right" points="520,225 550,242 550,390 520,373" class="leg"/>
+    <polygon id="perspective_leg_back_right" points="448,190 478,207 478,355 448,338" class="leg"/>
 
-    <polygon id="perspective_brace_right_lower_depth" points="580,285 670,330 670,355 580,310" class="brace"/>
-    <polygon id="perspective_leg_front_right" points="620,225 650,242 650,390 620,373" class="leg"/>
-    <polygon id="perspective_leg_back_right" points="548,190 578,207 578,355 548,338" class="leg"/>
+    <polygon id="perspective_center_brace_front" points="30,265 525,265 525,290 30,290" class="brace"/>
+    <polygon id="perspective_center_brace_back" points="45,320 540,320 540,345 45,345" class="brace"/>
+    <polygon id="perspective_brace_left_depth" points="20,205 110,250 110,275 20,230" class="brace"/>
+    <polygon id="perspective_brace_right_depth" points="450,205 540,250 540,275 450,230" class="brace"/>
 
-    <polygon id="perspective_center_brace_front" points="130,265 625,265 625,290 130,290" class="brace"/>
-    <polygon id="perspective_center_brace_back" points="145,320 640,320 640,345 145,345" class="brace"/>
-    <polygon id="perspective_brace_left_depth" points="120,205 210,250 210,275 120,230" class="brace"/>
-    <polygon id="perspective_brace_right_depth" points="550,205 640,250 640,275 550,230" class="brace"/>
+    <polygon id="perspective_leg_front_left" points="60,225 90,242 90,390 60,373" class="leg"/>
+    <polygon id="perspective_leg_back_left" points="-10,190 20,207 20,355 -10,338" class="leg"/>
 
-    <polygon id="perspective_leg_front_left" points="160,225 190,242 190,390 160,373" class="leg"/>
-    <polygon id="perspective_leg_back_left" points="90,190 120,207 120,355 90,338" class="leg"/>
+    <polygon id="perspective_brace_left_lower_depth" points="0,285 90,330 90,355 0,310" class="brace"/>
+    <polygon id="perspective_seat_3" points="-20,170 460,170 540,220 60,220" class="wood"/>
 
-    <polygon id="perspective_brace_left_lower_depth" points="100,285 190,330 190,355 100,310" class="brace"/>
-    <polygon id="perspective_seat_3" points="80,170 560,170 640,220 160,220" class="wood"/>
+    <circle id="perspective_screw_01" cx="60" cy="105" r="4" class="screw"/>
+    <circle id="perspective_screw_02" cx="120" cy="105" r="4" class="screw"/>
+    <circle id="perspective_screw_03" cx="400" cy="105" r="4" class="screw"/>
+    <circle id="perspective_screw_04" cx="460" cy="105" r="4" class="screw"/>
+    <circle id="perspective_screw_05" cx="65" cy="150" r="4" class="screw"/>
+    <circle id="perspective_screw_06" cx="125" cy="150" r="4" class="screw"/>
+    <circle id="perspective_screw_07" cx="405" cy="150" r="4" class="screw"/>
+    <circle id="perspective_screw_08" cx="465" cy="150" r="4" class="screw"/>
+    <circle id="perspective_screw_09" cx="70" cy="195" r="4" class="screw"/>
+    <circle id="perspective_screw_10" cx="130" cy="195" r="4" class="screw"/>
+    <circle id="perspective_screw_11" cx="410" cy="195" r="4" class="screw"/>
+    <circle id="perspective_screw_12" cx="470" cy="195" r="4" class="screw"/>
 
-    <circle id="perspective_screw_01" cx="160" cy="105" r="4" class="screw"/>
-    <circle id="perspective_screw_02" cx="220" cy="105" r="4" class="screw"/>
-    <circle id="perspective_screw_03" cx="500" cy="105" r="4" class="screw"/>
-    <circle id="perspective_screw_04" cx="560" cy="105" r="4" class="screw"/>
-    <circle id="perspective_screw_05" cx="165" cy="150" r="4" class="screw"/>
-    <circle id="perspective_screw_06" cx="225" cy="150" r="4" class="screw"/>
-    <circle id="perspective_screw_07" cx="505" cy="150" r="4" class="screw"/>
-    <circle id="perspective_screw_08" cx="565" cy="150" r="4" class="screw"/>
-    <circle id="perspective_screw_09" cx="170" cy="195" r="4" class="screw"/>
-    <circle id="perspective_screw_10" cx="230" cy="195" r="4" class="screw"/>
-    <circle id="perspective_screw_11" cx="510" cy="195" r="4" class="screw"/>
-    <circle id="perspective_screw_12" cx="570" cy="195" r="4" class="screw"/>
+    <text id="perspective_seat_label" x="150" y="60" class="label">座面材 1200mm × 3本</text>
+    <line id="perspective_seat_label_arrow" x1="235" y1="65" x2="260" y2="95" class="thin" marker-end="url(#arrow)"/>
 
-    <text id="perspective_seat_label" x="250" y="60" class="label">座面材 1200mm × 3本</text>
-    <line id="perspective_seat_label_arrow" x1="335" y1="65" x2="360" y2="95" class="thin" marker-end="url(#arrow)"/>
+    <text id="perspective_leg_label" x="370" y="295" class="label">脚材 380mm × 4本</text>
+    <line id="perspective_leg_label_arrow" x1="445" y1="300" x2="465" y2="345" class="thin" marker-end="url(#arrow)"/>
 
-    <text id="perspective_leg_label" x="470" y="295" class="label">脚材 380mm × 4本</text>
-    <line id="perspective_leg_label_arrow" x1="545" y1="300" x2="565" y2="345" class="thin" marker-end="url(#arrow)"/>
+    <text id="perspective_center_brace_label" x="110" y="300" class="label">中央補強材 1000mm</text>
+    <line id="perspective_center_brace_label_arrow" x1="210" y1="305" x2="250" y2="333" class="thin" marker-end="url(#arrow)"/>
 
-    <text id="perspective_center_brace_label" x="210" y="300" class="label">中央補強材 1000mm</text>
-    <line id="perspective_center_brace_label_arrow" x1="310" y1="305" x2="350" y2="333" class="thin" marker-end="url(#arrow)"/>
-
-    <text id="perspective_side_brace_label" x="20" y="265" class="label">横補強材 250mm</text>
-    <line id="perspective_side_brace_label_arrow" x1="140" y1="260" x2="170" y2="235" class="thin" marker-end="url(#arrow)"/>
+    <text id="perspective_side_brace_label" x="-80" y="265" class="label">横補強材 250mm</text>
+    <line id="perspective_side_brace_label_arrow" x1="40" y1="260" x2="70" y2="235" class="thin" marker-end="url(#arrow)"/>
   </g>
 
   <rect id="top_panel" x="800" y="120" width="760" height="520" class="panel"/>
