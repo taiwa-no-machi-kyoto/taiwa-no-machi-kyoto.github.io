@@ -308,7 +308,7 @@ function updateTopView() {
 function updateFrontView() {
   const scale = viewScale(600);
   const w = mmToPx(bench.width, scale);
-  const startX = -60;
+  const startX = 40;
   const endX = startX + w;
   const offset = mmToPx(bench.braceOffset, scale);
 
@@ -370,11 +370,11 @@ function calculateCenterBraceLength() {
 }
 
 const originalPerspectivePoints = {
-  perspective_seat_1: "-120,80 360,80 440,130 -40,130",
-  perspective_seat_2: "-120,125 360,125 440,175 -40,175",
-  perspective_seat_3: "-120,170 360,170 440,220 -40,220",
-  perspective_center_brace_front: "-70,265 425,265 425,290 -70,290",
-  perspective_center_brace_back: "-55,320 440,320 440,345 -55,345"
+  perspective_seat_1: "-20,80 460,80 540,130 60,130",
+  perspective_seat_2: "-20,125 460,125 540,175 60,175",
+  perspective_seat_3: "-20,170 460,170 540,220 60,220",
+  perspective_center_brace_front: "30,265 525,265 525,290 30,290",
+  perspective_center_brace_back: "45,320 540,320 540,345 45,345"
 };
 
 function updatePerspectiveView() {
